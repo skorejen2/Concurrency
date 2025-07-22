@@ -12,3 +12,4 @@ C:\Users\Gabriela\Desktop\net_testing\ConcurrencyProject\obj\Debug\net9.0\refint
 C:\Users\Gabriela\Desktop\net_testing\ConcurrencyProject\obj\Debug\net9.0\ConcurrencyProject.pdb
 C:\Users\Gabriela\Desktop\net_testing\ConcurrencyProject\obj\Debug\net9.0\ConcurrencyProject.genruntimeconfig.cache
 C:\Users\Gabriela\Desktop\net_testing\ConcurrencyProject\obj\Debug\net9.0\ref\ConcurrencyProject.dll
+C:\Users\Gabriela\Desktop\net_testing\ConcurrencyProject\obj\Debug\net9.0\ConcurrencyProject.sourcelink.json
