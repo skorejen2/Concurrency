@@ -23,7 +23,7 @@ public class Counter
             {
                 System.Console.WriteLine("Total values count: " + totalValues.Count);
                 Thread.Sleep(5000);
-                if (_IsFinished) break;
+                if (!t2.IsAlive) break;
             }
         });
 
@@ -67,21 +67,17 @@ public class Counter
             System.Console.WriteLine(Thread.CurrentThread.Name + " added value " + i);
             Thread.Sleep(50);
         }
-        _IsFinished = true;
+        totalValues.CompleteAdding();
         
     }
     public static void TakeOne()
     {
-        
-        for (int a = 0; ; a++)
-        {
-            if (_IsFinished) break;
-            var i = totalValues.Take();
-            System.Console.WriteLine(Thread.CurrentThread.Name + " took value " + i);
-            Thread.Sleep(200);
 
+        foreach (var item in totalValues.GetConsumingEnumerable())
+        {
+            System.Console.WriteLine($"Thread {Thread.CurrentThread.Name} took value {item}");
+            Thread.Sleep(200);
         }
-        
     }
 
 }
